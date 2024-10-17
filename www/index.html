@@ -30,7 +30,20 @@
                 txt +="FALSE<br>";
             }
             txt +="a: "+a+"<br>";
-            $("#disp2").html(txt);
+
+            var b =new Array(3);
+            b[0]=10;b[1]=50;b[2]=20;
+            b.push(40);
+            b.unshift(0);
+            b.push(4.5);
+            b.unshift("zero");
+
+            let msg="";
+            for(let i=0;i<b.length;i++){
+                msg +=i+":"+b[i]+"<br>";
+            }
+
+            $("#disp2").html(txt + "<br>" + msg);
         }
     </script>
 </head>
